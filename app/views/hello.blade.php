@@ -48,7 +48,7 @@
     <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
 </ol>
 
-<div class="container">
+<div class="container-fluid">
     <h1>Dashboard
         <small>Year Overview</small>
     </h1>
