@@ -2,48 +2,6 @@
 
 @section('content')
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-graduation-cap"></i> WhiteBoard</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown user-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cubes"></i> Select Module
-                        <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-cube"></i> CI301 - The individual project</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI312 - Computer Graphics Algorithms</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI315 - Object-Oriented Design and Architecture</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI316 - Verification and Validation</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI346 - Programming languages, concurrency and client
-                                server computing</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI360 - Mobile Application Development</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown user-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> DuncanOgle <b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                        <li><a href="#"><i class="fa fa-adjust"></i> High Contrast</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 <ol class="breadcrumb">
     <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
 </ol>
@@ -249,11 +207,5 @@
         </div>
     </div>
 </div>
-
-<footer id="footer">
-
-        <p class="text-muted">Copyright &copy; 2014 Whiteboard.</p>
-
-</footer>
 
 @stop
