@@ -14,10 +14,10 @@
             <h1>{{ $module->name }}</h1>
 
             <ul class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#studyMaterials">Study Materials</a></li>
-                <li><a href="#assignments">Assignments and Exams</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+                <li class="active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
+                <li><a href="#studyMaterials" data-toggle="tab">Study Materials</a></li>
+                <li><a href="#assignments" data-toggle="tab">Assignments and Exams</a></li>
+                <li><a href="#contacts" data-toggle="tab">Contacts</a></li>
             </ul>
 
             <div class="tab-content">
