@@ -9,6 +9,7 @@
     {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css') }}
     {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css') }}
     {{ HTML::style('css/main.css') }}
+    {{ HTML::style('css/sticky-footer.css') }}
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 </head>
 <body>
