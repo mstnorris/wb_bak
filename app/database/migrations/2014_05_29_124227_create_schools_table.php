@@ -14,8 +14,11 @@ class CreateSchoolsTable extends Migration {
 	{
 		Schema::create('schools', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->string('wbid', 16)->primary();
+            $table->string('name');
+            $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

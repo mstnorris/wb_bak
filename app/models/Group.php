@@ -1,6 +1,6 @@
 <?php
 
-class University extends \Eloquent {
+class Group extends \Eloquent {
 
     /**
      * @var string

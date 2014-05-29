@@ -14,8 +14,11 @@ class CreateUniversitiesTable extends Migration {
 	{
 		Schema::create('universities', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->string('wbid', 16)->primary();
+            $table->string('name');
+            $table->timestamps();
+            $table->softDeletes();
 		});
 	}
 

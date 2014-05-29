@@ -6,7 +6,12 @@ class DatabaseSeeder extends Seeder {
      * @var array
      */
     private $tables = array(
-        'users'
+        'users',
+        'universities',
+        'schools',
+        'courses',
+        'modules',
+        'groups'
     );
 
     /**
@@ -21,6 +26,11 @@ class DatabaseSeeder extends Seeder {
         $this->cleanDatabase();
 
         $this->call('UsersTableSeeder');
+        $this->call('UniversitiesTableSeeder');
+        $this->call('SchoolsTableSeeder');
+        $this->call('CoursesTableSeeder');
+        $this->call('ModulesTableSeeder');
+        $this->call('GroupsTableSeeder');
 
 
     }
