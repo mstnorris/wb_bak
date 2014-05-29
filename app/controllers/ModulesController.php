@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 class ModulesController extends \BaseController {
 
 	/**
@@ -49,12 +51,15 @@ class ModulesController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
-	{
-		$module = Module::findOrFail($id);
-
-		return View::make('modules.show', compact('module'));
-	}
+    public function show($wbid)
+    {
+        try {
+            $module = Module::whereWbid($wbid)->firstOrFail();
+        } catch (ModelNotFoundException $e) {
+            return Redirect::home();
+        }
+        return View::make('modules.show', compact('module'));
+    }
 
 	/**
 	 * Show the form for editing the specified module.
