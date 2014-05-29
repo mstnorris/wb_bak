@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-graduation-cap"></i> Whiteboard</a>
+            <a class="navbar-brand" href="/"><i class="fa fa-graduation-cap"></i> Whiteboard</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
