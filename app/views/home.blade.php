@@ -93,39 +93,38 @@
 
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-xs-7">
-                            <div class="panel panel-success">
-                                <div class="panel-heading text-right">
-                                    <i class="fa fa-crosshairs fa-4x pull-left"></i>
+                        <div class="col-xs-4">
+                            <a href="#">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading text-center">
+                                        <p class="announcement-heading">64%</p>
 
-                                    <div>
-                                        <p class="announcement-heading">64% / 71%</p>
-
-                                        <p class="announcement-text">Current/Predicted Grade</p>
+                                        <p class="announcement-text">Current grade</p>
                                     </div>
                                 </div>
-                                <a href="#">
-                                    <div class="panel-footer announcement-bottom">
-                                        Get higher grades <i class="fa fa-arrow-circle-right pull-right"></i>
-                                    </div>
-                                </a>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-xs-5">
-                            <div class="panel panel-warning">
-                                <div class="panel-heading text-right">
-                                    <p class="pull-left noal">3</p>
+                        <div class="col-xs-4">
+                            <a href="#">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading text-center">
+                                        <p class="announcement-heading">3</p>
 
-                                    <div>
-                                        <p class="announcement-text">Assignments due in over the next month</p>
+                                        <p class="announcement-text">Assignments due soon</p>
                                     </div>
                                 </div>
-                                <a href="#">
-                                    <div class="panel-footer announcement-bottom">
-                                        View assignments <i class="fa fa-arrow-circle-right pull-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading text-center">
+                                        <p class="announcement-heading">42</p>
+
+                                        <p class="announcement-text">Meaning of life</p>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
