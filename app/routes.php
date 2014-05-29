@@ -1,7 +1,4 @@
 <?php
 
-Route::get('/', function()
-{
-	return View::make('hello');
-
-});
+Route::get('/', 'HomeController@showDashboard');
+Route::get('about', 'HomeController@showAbout');
