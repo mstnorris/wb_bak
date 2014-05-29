@@ -3,6 +3,9 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
+/**
+ * Class User
+ */
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	/**
@@ -11,6 +14,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var string
 	 */
 	protected $table = 'users';
+
+    /**
+     * @var string
+     */
+    protected $primaryKey = 'wbid';
+    /**
+     * @var bool
+     */
+    public $incrementing = false;
+
+    // Don't forget to fill this array
+    /**
+     * @var array
+     */
+    protected $fillable = array('name', 'dob', 'email', 'username', 'password');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -80,4 +98,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+    /**
+     * @param $password
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = Hash::make($password);
+    }
 }
