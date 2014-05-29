@@ -3,7 +3,8 @@
 @section('content')
 
 <ol class="breadcrumb">
-    <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+    <li class="active"> About</li>
 </ol>
 
 <div class="container-fluid">
