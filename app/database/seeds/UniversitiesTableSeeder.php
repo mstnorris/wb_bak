@@ -16,7 +16,7 @@ class UniversitiesTableSeeder extends Seeder {
 
             University::create([
                 'wbid'      => $university_wbid,
-                'name'       => $university_name,
+                'name'       => $university_name . " University",
                 'created_at' => $university_created_at,
                 'updated_at' => $university_updated_at
             ]);
