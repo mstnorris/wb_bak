@@ -1,0 +1,1 @@
+/home/vagrant/git/whiteboard/app/views/universities/show.blade.php

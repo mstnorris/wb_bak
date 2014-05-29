@@ -1,0 +1,1 @@
+/home/vagrant/git/whiteboard/app/views/courses/index.blade.php
