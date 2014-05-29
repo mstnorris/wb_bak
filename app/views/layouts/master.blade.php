@@ -60,7 +60,7 @@
 
 <footer id="footer">
 
-    <p class="text-muted">Copyright &copy; 2014 Whiteboard.</p>
+    <p class="text-muted">Copyright &copy; 2014 Whiteboard - <a href="about">About</a></p>
 
 </footer>
 
