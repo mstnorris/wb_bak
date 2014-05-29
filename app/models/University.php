@@ -22,4 +22,15 @@ class University extends \Eloquent {
 		// 'title' => 'required'
 	];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function schools() {
+        return $this->hasMany('School', 'uni_wbid', 'wbid');
+    }
+
+    public function mdbid() {
+        return $this->hasOne('Wbid', 'wbid', 'wbid');
+    }
+
 }
