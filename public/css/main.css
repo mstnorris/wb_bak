@@ -43,6 +43,13 @@ footer {
     font-weight: bold;
 }
 
+.bottom-border {
+    border-bottom:1px solid #ccc;
+}
+
+.well {
+    text-align: center;
+}
 /* Edit Below to Customize Widths > 768px */
 @media (min-width: 768px) {
     ul.nav li.dropdown:hover > ul.dropdown-menu {
