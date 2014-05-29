@@ -159,43 +159,43 @@
                             </tr>
                             </thead>
                             <tr>
-                                <td>Mon</td>
+                                <td>Mon<span class="fullDay">day</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr>
-                                <td>Tue</td>
+                                <td>Tue<span class="fullDay">sday</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr class="active">
-                                <td>Wed</td>
+                                <td>Wed<span class="fullDay">nesday</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr>
-                                <td>Thu</td>
+                                <td>Thu<span class="fullDay">rsday</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr>
-                                <td>Fri</td>
+                                <td>Fri<span class="fullDay">day</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr>
-                                <td>Sat</td>
+                                <td>Sat<span class="fullDay">urday</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                             </tr>
                             <tr>
-                                <td>Sun</td>
+                                <td>Sun<span class="fullDay">day</span></td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>
                                 <td>8:00 - 17:00</td>

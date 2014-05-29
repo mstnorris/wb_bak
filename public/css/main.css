@@ -34,6 +34,10 @@ footer {
     margin-top: -10px;
 }
 
+.fullDay {
+    display: none;
+}
+
 /* Edit Below to Customize Widths > 768px */
 @media (min-width: 768px) {
     ul.nav li.dropdown:hover > ul.dropdown-menu {
@@ -46,5 +50,9 @@ footer {
 
     .dropdown-menu li {
         max-width: 350px;
+    }
+
+    .fullDay {
+        display: inline;
     }
 }
