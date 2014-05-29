@@ -23,6 +23,6 @@ footer#footer {
 /* Not required for template or sticky footer method. */
 
 
-.container .text-muted {
-  margin: 20px 0;
+footer p.text-muted {
+  margin: 0 20px;
 }
