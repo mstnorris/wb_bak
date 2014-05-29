@@ -3,5 +3,5 @@
 Route::get('/', function()
 {
 	//return View::make('hello');
-    return "Whiteboard dev-duncan2";
+    return "Whiteboard Homepage";
 });
