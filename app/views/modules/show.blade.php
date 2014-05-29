@@ -11,7 +11,29 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <h1 class="page-header">{{ $module->name }}</h1>
+            <h1>{{ $module->name }}</h1>
+
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#studyMaterials">Study Materials</a></li>
+                <li><a href="#assignments">Assignments and Exams</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="dashboard">
+                    <p>I'm in Section 1.</p>
+                </div>
+                <div class="tab-pane" id="studyMaterials">
+                    <p>I'm in Section 2.</p>
+                </div>
+                <div class="tab-pane" id="assignments">
+                    <p>I'm in Section 3.</p>
+                </div>
+                <div class="tab-pane" id="contacts">
+                    <p>I'm in Section 3.</p>
+                </div>
+            </div>
 
             <p>ID: {{ $module->wbid }}</p>
 
