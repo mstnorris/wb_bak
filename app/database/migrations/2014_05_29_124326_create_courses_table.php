@@ -16,6 +16,7 @@ class CreateCoursesTable extends Migration {
 		{
             $table->engine = 'InnoDB';
             $table->string('wbid', 16)->primary();
+            $table->string('school_wbid', 16);
             $table->string('name');
             $table->timestamps();
             $table->softDeletes();
