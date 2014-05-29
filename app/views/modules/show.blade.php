@@ -14,8 +14,11 @@
             <h1 class="page-header">{{ $module->name }}</h1>
 
             <p>ID: {{ $module->wbid }}</p>
+
             <p>Created: {{ $module->created_at }}</p>
+
             <p>Modified: {{ $module->updated_at }}</p>
+        </div>
     </div>
 </div>
 
