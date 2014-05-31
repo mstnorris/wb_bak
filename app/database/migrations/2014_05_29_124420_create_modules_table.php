@@ -18,8 +18,12 @@ class CreateModulesTable extends Migration {
             $table->string('wbid', 16)->primary();
             $table->string('course_wbid', 16);
             $table->string('name');
+            $table->text('description');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('course_wbid')
+                ->references('wbid')->on('courses')
+                ->onDelete('cascade');
 		});
 	}
 

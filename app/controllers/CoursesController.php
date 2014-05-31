@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 class CoursesController extends \BaseController {
 
 	/**
@@ -43,18 +45,22 @@ class CoursesController extends \BaseController {
 		return Redirect::route('courses.index');
 	}
 
-	/**
-	 * Display the specified course.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		$course = Course::findOrFail($id);
-
-		return View::make('courses.show', compact('course'));
-	}
+    /**
+     * Display the specified module.
+     *
+     * @param $wbid
+     * @internal param int $id
+     * @return Response
+     */
+    public function show($wbid)
+    {
+        try {
+            $course = Course::whereWbid($wbid)->firstOrFail();
+        } catch (ModelNotFoundException $e) {
+            return Redirect::home();
+        }
+        return View::make('courses.show', compact('course'));
+    }
 
 	/**
 	 * Show the form for editing the specified course.

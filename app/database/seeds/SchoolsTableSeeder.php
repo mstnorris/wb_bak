@@ -21,7 +21,7 @@ class SchoolsTableSeeder extends Seeder {
                 School::create([
                     'wbid'      => $school_wbid,
                     'university_wbid' => $university_wbid,
-                    'name'       => $school_name,
+                    'name'       => $school_name . ' School',
                     'created_at' => $school_created_at,
                     'updated_at' => $school_updated_at
                 ]);

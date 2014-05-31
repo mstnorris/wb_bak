@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCoursesTable extends Migration {
+class CreateMaterialsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,16 +12,18 @@ class CreateCoursesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('courses', function(Blueprint $table)
+		Schema::create('materials', function(Blueprint $table)
 		{
             $table->engine = 'InnoDB';
             $table->string('wbid', 16)->primary();
-            $table->string('school_wbid', 16);
+            $table->string('group_wbid', 16);
             $table->string('name');
+            $table->text('description');
+            $table->string('type');
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('school_wbid')
-                ->references('wbid')->on('schools')
+            $table->foreign('group_wbid')
+                ->references('wbid')->on('groups')
                 ->onDelete('cascade');
 		});
 	}
@@ -34,7 +36,7 @@ class CreateCoursesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('courses');
+		Schema::drop('materials');
 	}
 
 }

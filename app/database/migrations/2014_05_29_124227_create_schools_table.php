@@ -20,6 +20,9 @@ class CreateSchoolsTable extends Migration {
             $table->string('name');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('university_wbid')
+                ->references('wbid')->on('universities')
+                ->onDelete('cascade');
 		});
 	}
 

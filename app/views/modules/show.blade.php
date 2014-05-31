@@ -5,7 +5,7 @@
 <ol class="breadcrumb">
     <li><a href="/universities/{{ $module->course->school->university->wbid }}"><i class="fa fa-university"></i>&nbsp;{{ $module->course->school->university->name }}</a></li>
     <li><a href="/schools/{{ $module->course->school->wbid }}"><i class="fa fa-building"></i>&nbsp;{{ $module->course->school->name }}</a></li>
-    <li><a href="/modules"><i class="fa fa-cubes"></i>&nbsp;Modules</a></li>
+    <li><a href="/courses/{{ $module->course->wbid }}"><i class="fa fa-shield"></i>&nbsp;{{ $module->course->name }}</a></li>
     <li class="active"><i class="fa fa-cube"></i>&nbsp;{{ $module->name }}</li>
 </ol>
 
@@ -43,7 +43,17 @@
 
 
     <div class="row">
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-3 col-xs-6">
+            <a href="#">
+                <div class="panel panel-warning">
+                    <div class="panel-heading text-center">
+                        <p class="announcement-heading">{{ $module->groups->count() }}</p>
+                        <p class="announcement-text">Until next assignment is due</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6">
             <a href="#">
                 <div class="panel panel-warning">
                     <div class="panel-heading text-center">
@@ -171,78 +181,35 @@
 <div class="tab-pane" id="studyMaterials">
     <h2>Study Materials</h2>
 
+
+    @foreach($module->groups as $group)
+    @foreach($group->materials as $material)
     <div class="row bottom-border">
         <div class="col-sm-6 col-xs-12">
-            <h3>Week 1</h3>
+            <h3>{{ $material->name }}</h3>
 
-            <p>Lorem ipsum dolor sit amet, ipsum quam consequat nonummy elit, vehicula est amet venenatis ultrices,
-                egestas vitae ut ullamcorper, viverra non interdum consectetuer scelerisque.</p>
+            <p>{{ $material->description }}</p>
         </div>
 
         <div class="col-sm-3 col-xs-6">
             <div class="well">
-                <p><i class="fa fa-file-powerpoint-o fa-5x"></i></p>
+                <p><i class="fa {{ get_fa_icon($material->type) }} fa-5x"></i></p>
 
-                <p>Download Presentation</p>
+                <p>Download {{ $material->type }} file</p>
             </div>
         </div>
 
         <div class="col-sm-3 col-xs-6">
             <div class="well">
-                <p><i class="fa fa-flask fa-5x"></i></p>
+                <p><i class="fa {{ get_fa_icon($material->group->type) }} fa-5x"></i></p>
 
-                <p>Labs!</p>
+                <p>{{ $material->group->type }}</p>
             </div>
         </div>
     </div>
+    @endforeach
+    @endforeach
 
-    <div class="row bottom-border">
-        <div class="col-sm-6 col-xs-12">
-            <h3>Week 2</h3>
-
-            <p>Leo volutpat et sed vivamus, quis nibh donec fusce velit.</p>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <div class="well">
-                <p><i class="fa fa-file-powerpoint-o fa-5x"></i></p>
-
-                <p>Download Presentation</p>
-            </div>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <div class="well">
-                <p><i class="fa fa-book fa-5x"></i></p>
-
-                <p>Reading!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row bottom-border">
-        <div class="col-sm-6 col-xs-12">
-            <h3>Week 3</h3>
-
-            <p>Nihil viverra vel consectetuer, pulvinar erat nec euismod, donec morbi nulla scelerisque.</p>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <div class="well">
-                <p><i class="fa fa-file-powerpoint-o fa-5x"></i></p>
-
-                <p>Download Presentation</p>
-            </div>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <div class="well">
-                <p><i class="fa fa-file-archive-o fa-5x"></i></p>
-
-                <p>Tutorial Files!</p>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="tab-pane" id="assignments">
     <h2>Assignments and Exams</h2>

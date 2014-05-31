@@ -18,6 +18,6 @@ class School extends \Eloquent {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function courses() {
-        return $this->hasMany('Course', 'course_wbid', 'wbid');
+        return $this->hasMany('Course', 'school_wbid', 'wbid');
     }
 }

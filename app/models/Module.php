@@ -18,6 +18,6 @@ class Module extends \Eloquent {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function groups() {
-        return $this->hasMany('Group', 'group_wbid', 'wbid');
+        return $this->hasMany('Group', 'module_wbid', 'wbid');
     }
 }

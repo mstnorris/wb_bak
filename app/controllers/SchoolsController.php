@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 class SchoolsController extends \BaseController {
 
 	/**
@@ -43,18 +45,22 @@ class SchoolsController extends \BaseController {
 		return Redirect::route('schools.index');
 	}
 
-	/**
-	 * Display the specified school.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		$school = School::findOrFail($id);
-
-		return View::make('schools.show', compact('school'));
-	}
+    /**
+     * Display the specified module.
+     *
+     * @param $wbid
+     * @internal param int $id
+     * @return Response
+     */
+    public function show($wbid)
+    {
+        try {
+            $school = School::whereWbid($wbid)->firstOrFail();
+        } catch (ModelNotFoundException $e) {
+            return Redirect::home();
+        }
+        return View::make('schools.show', compact('school'));
+    }
 
 	/**
 	 * Show the form for editing the specified school.

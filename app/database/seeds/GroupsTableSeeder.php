@@ -22,7 +22,8 @@ class GroupsTableSeeder extends Seeder
                 Group::create([
                     'wbid' => $group_wbid,
                     'module_wbid' => $module_wbid,
-                    'name' => $group_name,
+                    'name' => $group_name . ' Group',
+                    'type' => $faker->randomElement($array = array('lec', 'lab', 'tut')),
                     'created_at' => $group_created_at,
                     'updated_at' => $group_updated_at
                 ]);

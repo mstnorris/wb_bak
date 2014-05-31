@@ -18,8 +18,12 @@ class CreateGroupsTable extends Migration {
             $table->string('wbid', 16)->primary();
             $table->string('module_wbid', 16);
             $table->string('name');
+            $table->string('type');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('module_wbid')
+                ->references('wbid')->on('modules')
+                ->onDelete('cascade');
 		});
 	}
 

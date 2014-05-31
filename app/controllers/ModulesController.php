@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
+/**
+ * Class ModulesController
+ */
 class ModulesController extends \BaseController {
 
 	/**
@@ -45,12 +48,13 @@ class ModulesController extends \BaseController {
 		return Redirect::route('modules.index');
 	}
 
-	/**
-	 * Display the specified module.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Display the specified module.
+     *
+     * @param $wbid
+     * @internal param int $id
+     * @return Response
+     */
     public function show($wbid)
     {
         try {

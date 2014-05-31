@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder {
         'schools',
         'courses',
         'modules',
-        'groups'
+        'groups',
+        'materials'
     );
 
     /**
@@ -22,17 +23,14 @@ class DatabaseSeeder extends Seeder {
     public function run()
     {
         Eloquent::unguard();
-
         $this->cleanDatabase();
-
         $this->call('UsersTableSeeder');
         $this->call('UniversitiesTableSeeder');
         $this->call('SchoolsTableSeeder');
         $this->call('CoursesTableSeeder');
         $this->call('ModulesTableSeeder');
         $this->call('GroupsTableSeeder');
-
-
+        $this->call('MaterialsTableSeeder');
     }
 
     public function cleanDatabase()

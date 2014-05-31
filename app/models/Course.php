@@ -8,7 +8,7 @@ class Course extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['wbid', 'school_wbid', 'name'];
 
     public function school() {
         return $this->belongsTo('School', 'school_wbid', 'wbid');
@@ -18,7 +18,7 @@ class Course extends \Eloquent {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function modules() {
-        return $this->hasMany('Module', 'module_wbid', 'wbid');
+        return $this->hasMany('Module', 'course_wbid', 'wbid');
     }
 
 }

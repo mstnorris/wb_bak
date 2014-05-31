@@ -18,7 +18,7 @@ class CoursesTableSeeder extends Seeder {
                 Course::create([
                     'wbid'      => $course_wbid,
                     'school_wbid' => $school_wbid,
-                    'name'       => $course_name,
+                    'name'       => $course_name . ' Course',
                     'created_at' => $course_created_at,
                     'updated_at' => $course_updated_at
                 ]);

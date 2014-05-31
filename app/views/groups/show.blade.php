@@ -1,0 +1,1 @@
+/home/vagrant/git/whiteboard/app/views/groups/show.blade.php

@@ -1,13 +1,14 @@
 <?php
 
-class Group extends \Eloquent {
+class Material extends \Eloquent {
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'groups';
+    protected $table = 'materials';
+
     /**
      * @var string
      */
@@ -21,19 +22,15 @@ class Group extends \Eloquent {
     /**
      * @var array
      */
-    protected $fillable = array('name', 'type', 'wbid', 'module_wbid');
+    protected $fillable = array('wbid', 'name', 'description', 'type', 'group_wbid');
 
 	// Add your validation rules here
 	public static $rules = [
 		// 'title' => 'required'
 	];
 
-    public function module() {
-        return $this->belongsTo('Module', 'module_wbid', 'wbid');
-    }
-
-    public function materials() {
-        return $this->hasMany('Material', 'group_wbid', 'wbid');
+    public function group() {
+        return $this->belongsTo('Group', 'group_wbid', 'wbid');
     }
 
 }
