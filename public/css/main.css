@@ -45,11 +45,18 @@ footer {
 
 .bottom-border {
     border-bottom:1px solid #ccc;
+    margin-bottom:20px;
 }
 
 .well {
     text-align: center;
 }
+
+.list-group-item h4 small {
+    display: block;
+    padding-top: 5px;
+}
+
 /* Edit Below to Customize Widths > 768px */
 @media (min-width: 768px) {
     ul.nav li.dropdown:hover > ul.dropdown-menu {
