@@ -11,7 +11,7 @@ class School extends \Eloquent {
 	protected $fillable = [];
 
     public function university() {
-        return $this->belongsTo('University', 'uni_wbid', 'wbid');
+        return $this->belongsTo('University', 'university_wbid', 'wbid');
     }
 
     /**

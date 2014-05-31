@@ -26,7 +26,7 @@ class University extends \Eloquent {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function schools() {
-        return $this->hasMany('School', 'uni_wbid', 'wbid');
+        return $this->hasMany('School', 'university_wbid', 'wbid');
     }
 
     public function mdbid() {

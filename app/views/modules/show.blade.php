@@ -3,9 +3,10 @@
 @section('content')
 
 <ol class="breadcrumb">
-    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="/modules"><i class="fa fa-cubes"></i> Modules</a></li>
-    <li class="active"><i class="fa fa-cube"></i> {{ $module->name }}</li>
+    <li><a href="/universities/{{ $module->course->school->university->wbid }}"><i class="fa fa-university"></i>&nbsp;{{ $module->course->school->university->name }}</a></li>
+    <li><a href="/schools/{{ $module->course->school->wbid }}"><i class="fa fa-building"></i>&nbsp;{{ $module->course->school->name }}</a></li>
+    <li><a href="/modules"><i class="fa fa-cubes"></i>&nbsp;Modules</a></li>
+    <li class="active"><i class="fa fa-cube"></i>&nbsp;{{ $module->name }}</li>
 </ol>
 
 <div class="container-fluid">

@@ -6,7 +6,6 @@
 	"require": {
         "laravel/framework": "4.1.*",
         "intervention/image": "dev-master",
-        "cartalyst/sentry": "2.1.*",
         "laracasts/validation": "1.1.*"
 	},
 	"autoload": {
