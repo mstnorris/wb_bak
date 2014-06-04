@@ -16,12 +16,14 @@ class CreateUniversitiesTable extends Migration {
 		{
             $table->engine = 'InnoDB';
             $table->string('wbid', 16)->primary();
-            $table->string('name');
+            $table->string('ucas_code', 3)->unique();
+            $table->string('name')->unique();
             $table->string('web');
             $table->string('telephone');
             $table->string('email');
             $table->string('lat');
             $table->string('long');
+            $table->string('colour_theme');
             $table->timestamps();
             $table->softDeletes();
 		});
