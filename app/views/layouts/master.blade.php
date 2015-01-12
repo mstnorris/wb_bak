@@ -31,18 +31,13 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cubes"></i> Select Module
                         <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-cube"></i> CI301 - The individual project</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI312 - Computer Graphics Algorithms</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI315 - Object-Oriented Design and Architecture</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI316 - Verification and Validation</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI346 - Programming languages, concurrency and client
-                                server computing</a></li>
-                        <li><a href="#"><i class="fa fa-cube"></i> CI360 - Mobile Application Development</a></li>
+                        @foreach ($modules as $module)
+                            <li><a href="#"><i class="fa fa-cube"></i> {{ $module->wbid}} - {{ $module->name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="dropdown user-dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> DuncanOgle <b
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> mstnorris <b
                             class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>

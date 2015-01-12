@@ -4,7 +4,8 @@ class HomeController extends BaseController {
 
 	public function showDashboard()
 	{
-		return View::make('home');
+		$modules = Module::all();
+		return View::make('home', compact('modules'));
 	}
 
     public function showAbout() {

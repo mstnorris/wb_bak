@@ -17,6 +17,7 @@ class UniversitiesTableSeeder extends Seeder
 
             University::create([
                 'wbid' => $university_wbid,
+                'ucas_code' => str_random(4),
                 'name' => $university_name . " University",
                 'web' => 'http://www.' . strtolower(preg_replace("/[^A-Za-z0-9]/", "", $university_name)) . '.ac.uk',
                 'telephone' => '01' . $faker->numerify($string = '#########'),
